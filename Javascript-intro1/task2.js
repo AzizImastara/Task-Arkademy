@@ -3,16 +3,16 @@ const mtk = 80;
 const bin = 90;
 const bing = 89;
 const ipa = 69;
-let validate = [
+let validasi = [
   {name: 'Matematika', value: mtk},
   {name: "Bahasa Indonesia", value: bin},
-  {name: 'Bahasa Indonesia', value: bing},
+  {name: 'Bahasa Inggris', value: bing},
   {name: "IPA", value: ipa}
 ]
 
-const emptyField = validate.find(field => field.value === '');
+const emptyField = validasi.find(field => field.value === '');
 if(!emptyField) {
-  let rata = (mtk + bin + bing + ipa) / validate.length
+  let rata = (mtk + bin + bing + ipa) / validasi.length
   console.log(`Rata-rata UN = ${rata}`)
   if(rata >= 90 && rata <= 100) {
     console.log('Grade = A');
