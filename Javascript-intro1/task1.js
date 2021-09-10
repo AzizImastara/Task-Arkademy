@@ -1,4 +1,4 @@
-let biodata = {
+const biodata = {
   name : 'Moh. Syahrul Aziz Imastara',
   age : 19,
   hobbies : ['Basket', 'Gaming'],
@@ -25,7 +25,7 @@ let biodata = {
     ],
   skill : [
     {
-      skillName: 'CSS',
+      skillName: 'HTML & CSS',
       level: 'beginner',
     },
     {

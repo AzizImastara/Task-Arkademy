@@ -24,5 +24,6 @@ const updateData = {
 console.log(updateData)
 
 // Ambilah data “street dan city” tersebut menggunakan destructuring
-const {address: {street}, address: {city}} = data;
+const {address: {street}, 
+address: {city}} = data;
 console.log(`${street}, ${city}`);
