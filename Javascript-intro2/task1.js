@@ -27,7 +27,7 @@ console.log(checkNum);
 
 // 6. some() digunakan untuk mengembalikan nilai true jika setidaknya satu elemen dalam larik memenuhi fungsi pengujian yang disediakan
 const age = [15, 16, 17, 18, 19];
-const checkAge = age.some((age) => age < 17);
+const checkAge = age.some(age => age < 17);
 console.log(checkAge);
 
 // 7. repeat() digunakan untuk mengulangi sebuah string
@@ -37,3 +37,14 @@ console.log(string.repeat(2));
 // 8. sort() digunakan mengurutkan elemen dalam sebuah array
 const no = [20, 13, 17, 1, 90];
 console.log(no.sort());
+
+// 9. map() digunakan untuk merubah semua elemen didalam suatu array menjadi elemen dengan nilai yang baru
+const angka = [1, 2, 4, 20];
+const newAngka = angka.map(a => a * 2);
+console.log(newAngka);
+
+// `10. reduce() digunakan untuk mengakumulasikan nilai berdasarkan elemen didalam array
+const sum = angka.filter(a => a > 3) // 4, 20
+    .map (a => a * 2) // 8, 40
+    .reduce ((acc, cur) => acc * cur);
+console.log(sum);
