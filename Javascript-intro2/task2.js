@@ -6,24 +6,23 @@ const names = [
     'Deirdre', 'Diana', 'Elizabeth',
     'Ella', 'Faith', 'Olivia', 'Penelope']
 
-
-function searchName(keywoard, limit, callback) {
-    //ubah keyword menjadi lowercase supaya menghiraukan case sensitif
-    keywoard = keywoard.toLowerCase();
-    //menggunakan method filter untuk mengetahui nama yang menggandung huruf tertentu dan menghiraukan case sensitif
-    let filterName = names.filter(name => name.toLowerCase().indexOf(keywoard) !== -1)
-    filterName.length = limit
-    callback(filterName);
-}
-
-function callback(filterName) {
-    //menghapus nilai kosong dari arrray
-    let emptyName = filterName.filter(nama => nama != null);
-    if (emptyName.length == 0) {
-        console.log('nama tidak ada')
-    } else {
-        console.log(emptyName)
+const searchName = (keywoard, limit, callback) => {
+    // keywoard menjadi lowercase supaya menghiraukan case sensitif
+    // case sensitif menganggap setara huruf besar dan huruf kecil 
+    // indexOf() mengembalikan angka
+    const arrFilter = names.filter(e => e.toLowerCase().indexOf(keywoard) !== -1);
+    let arrResult = [];
+    // Proses limit data menggunakan looping
+    for(let i = 0; i <= arrFilter.length-1; i++){
+        if((i+1) <= limit){
+            arrResult.push(arrFilter[i]);
+        }
     }
+    callback(arrResult);
+}
+// Proses output data
+const callback = (result) => {
+    console.log(result);
 }
 
-searchName('an', 3, callback)
+searchName('an', 3, callback);
