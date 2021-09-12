@@ -44,7 +44,8 @@ const newAngka = angka.map(a => a * 2);
 console.log(newAngka);
 
 // `10. reduce() digunakan untuk mengakumulasikan nilai berdasarkan elemen didalam array
-const sum = angka.filter(a => a > 3) // 4, 20
-    .map (a => a * 2) // 8, 40
+const newsAngka = [1, 2, 5, 10];
+const sum = newsAngka.filter(a => a > 3) // 5, 10
+    .map (a => a * 2) // 10, 20
     .reduce ((acc, cur) => acc * cur);
 console.log(sum);
