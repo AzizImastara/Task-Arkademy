@@ -22,4 +22,4 @@ const callback = (result) => {
     console.log(result);
 }
 
-searchName('an', 3, callback);
+searchName('an', 4, callback);
