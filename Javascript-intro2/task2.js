@@ -7,10 +7,7 @@ const names = [
     'Ella', 'Faith', 'Olivia', 'Penelope']
 
 const searchName = (keywoard, limit, callback) => {
-    // keywoard menjadi lowercase supaya menghiraukan case sensitif
-    // case sensitif menganggap setara huruf besar dan huruf kecil 
-    // indexOf() mengembalikan angka
-    const arrFilter = names.filter(e => e.toLowerCase().indexOf(keywoard) !== -1);
+    const arrFilter = names.filter(e => e.toLowerCase().includes(keywoard));
     let arrResult = [];
     // Proses limit data menggunakan looping
     for(let i = 0; i <= arrFilter.length-1; i++){
