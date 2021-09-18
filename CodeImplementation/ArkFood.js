@@ -11,7 +11,7 @@ const ArkFood = (harga, voucher, jarak, pajak) => {
                 potongan = 50000
             }
         } else {
-            potongan = false;
+            potongan = 0;
         }
     } else if ((voucher = 'DITRAKTIRDEMY')){
         if (harga >= 25000){
@@ -20,14 +20,14 @@ const ArkFood = (harga, voucher, jarak, pajak) => {
                 potongan = 30000
             }
         } else {
-            potongan = false;
+            potongan = 0;
         }
     }
 
     // JARAK
-    if (jarak > 2){
-        biayaAntar += (jarak -2) * 3000 + 5000;
-    } else if (jarak == 2){
+    if(jarak > 2){
+        biayaAntar += (jarak - 2) * 3000 + 5000;
+    } else if (jarak >= 1 && jarak <= 2){
         biayaAntar = 5000;
     } else {
         biayaAntar = 0;
